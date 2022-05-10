@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "target": "es6",
+    "lib": ["esnext"],
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "resolveJsonModule": true
+  }
+}

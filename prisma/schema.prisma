@@ -1,0 +1,30 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model User {
+  id          String   @id @unique
+  username    String   @db.VarChar(255)
+  bits        Int      @default(0)
+  bank        Int      @default(0)
+  commandsRan Int      @default(0)
+  xp          Int      @default(0)
+  lvl         Int      @default(0)
+  createdAt   DateTime @default(now())
+}
+
+model Guild {
+  id               String  @id @unique
+  name             String  @db.VarChar(255)
+  prefix           String  @default("*!") @db.VarChar(5)
+  robbing          Boolean @default(false)
+  logging          Boolean @default(false)
+  loggingChannelID String? @default("") @db.VarChar(255)
+}

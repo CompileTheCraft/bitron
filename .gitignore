@@ -1,0 +1,9 @@
+# dependencies
+/node_modules/
+
+# secrets
+.env
+dbCred.txt
+
+# vscode
+/.vscode/
